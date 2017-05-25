@@ -1,0 +1,8 @@
+---
+- hosts: shared-infra_hosts
+  tasks:
+  - name: Install haproxyctl Package
+    apt:
+      name: haproxyctl
+      state: present
+      dpkg_options: 'force-confold,force-confdef'

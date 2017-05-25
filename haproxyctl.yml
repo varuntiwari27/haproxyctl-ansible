@@ -1,0 +1,15 @@
+---
+- hosts: shared-infra_hosts
+  tasks:
+  - name: commands
+    shell: haproxyctl show health | grep "{{SERVER}}" | awk '{print $1 "/" $2}'
+    register: output
+    tags:
+      - commands
+
+  - name: enable/disable a service/server
+    shell: haproxyctl "{{ACTION}}" server "{{item}}"
+    with_items:
+      - "{{output.stdout_lines}}"
+    tags:
+      - action

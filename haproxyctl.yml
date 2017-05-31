@@ -13,3 +13,12 @@
       - "{{output.stdout_lines}}"
     tags:
       - action
+
+  - name: list_service
+    shell: haproxyctl show health | egrep -v "BACKEND|FRONTEND|pxname" | sort -k2
+    register: list_service
+    tags:
+      - list_service
+  - debug: msg="{{list_service.stdout_lines}}"
+    tags:
+      - list_service

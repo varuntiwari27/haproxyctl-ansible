@@ -1,5 +1,5 @@
 ---
-- hosts: shared-infra_hosts
+- hosts: keepalived_hosts
   tasks:
   - name: commands
     shell: haproxyctl show health | grep "{{SERVER}}" | awk '{print $1 "/" $2}'

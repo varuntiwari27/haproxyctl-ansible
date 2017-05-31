@@ -6,6 +6,6 @@ Plabooks for installing haproxyctl and enabling/disabling server/service
 
 openstack-ansible haproxytest.yml -e "SERVER=" -e "ACTION="
 
-Example:
-openstack-ansible haproxytest.yml -e "SERVER=sdc-openstack-49_rabbit_mq_container" -e "ACTION=enable"\n
-openstack-ansible haproxytest.yml -e "SERVER=sdc-openstack-49" -e "ACTION=enable"\n
+Example:  
+openstack-ansible haproxytest.yml -e "SERVER=sdc-openstack-49_rabbit_mq_container" -e "ACTION=enable"  
+openstack-ansible haproxytest.yml -e "SERVER=sdc-openstack-49" -e "ACTION=enable"  

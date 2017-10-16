@@ -8,5 +8,5 @@ openstack-ansible haproxyctl.yml -e "SERVER=" -e "ACTION="
 openstack-ansible haproxyctl.yml -t list_service  
 
 Example:  
-openstack-ansible haproxyctl.yml -e "SERVER=sdc-openstack-49_rabbit_mq_container" -e "ACTION=enable"  
-openstack-ansible haproxyctl.yml -e "SERVER=sdc-openstack-49" -e "ACTION=enable"  
+openstack-ansible haproxyctl.yml -e "SERVER="container name (complete/wildcard)i"" -e "ACTION=enable"  
+openstack-ansible haproxyctl.yml -e "SERVER="controllername"" -e "ACTION=enable"  
